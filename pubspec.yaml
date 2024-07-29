@@ -1,0 +1,52 @@
+name: topstretching
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.6
+  flutter_svg: ^2.0.10+1
+  scale_button: ^2.1.2
+  country_state_city_picker: ^1.2.8
+  flutter_screenutil: ^5.9.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^3.0.0
+
+
+flutter:
+  uses-material-design: true
+
+
+
+  assets:
+     - assets/images/
+     - assets/icons/
+     - assets/logos/
+     - assets/translations/
+     - assets/fonts/
+
+
+  fonts:
+     - family: Bebas Neue
+       fonts:
+          - asset: assets/fonts/bebas_neue/BebasNeue-Regular.ttf
+
+     - family: Gotham Pro
+       fonts:
+         - asset: assets/fonts/gothampro/gothampro.ttf
+         - asset: assets/fonts/gothampro/gothampro_medium.ttf
