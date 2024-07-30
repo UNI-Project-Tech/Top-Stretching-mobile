@@ -88,8 +88,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ),
             ),
             10.verticalSpace,
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
+            Padding(              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
