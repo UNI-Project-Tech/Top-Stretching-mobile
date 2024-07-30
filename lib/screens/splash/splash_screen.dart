@@ -12,8 +12,8 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, RouteNames.onBoarding);
+    Future.delayed(const Duration(seconds: 2), () {
+      Navigator.pushReplacementNamed(context, RouteNames.selectedAuth);
     });
     super.initState();
   }

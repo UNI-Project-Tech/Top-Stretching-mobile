@@ -94,11 +94,13 @@ abstract class AppColors {
   // ];
 
   static const mainGradient = LinearGradient(
-    begin: Alignment(-0.05, -1.00),
-    end: Alignment(0.05, 1),
+    // begin: Alignment(-0.05, -1.00),
+    // end: Alignment(0.05, 1),
     colors: [
-      mainOrange,
-      red,
+
+      Color(0xffBB6BD9),
+      Color(0xffC877E7),
+      Color(0xff6E2F86),
     ],
   );
 
@@ -106,8 +108,8 @@ abstract class AppColors {
     begin: Alignment(0.00, -1.00),
     end: Alignment(0, 1),
     colors: [
-      white,
-      Colors.transparent,
+      Colors.white,
+      white
     ],
   );
 

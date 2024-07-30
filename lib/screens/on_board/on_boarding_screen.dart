@@ -90,7 +90,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             10.verticalSpace,
             Padding(              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, RouteNames.login);
+                },
                 style: ElevatedButton.styleFrom(
                   maximumSize:  Size(double.infinity, 50.h),
                   minimumSize:  Size(double.infinity, 50.h),

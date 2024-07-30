@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 
 import 'package:topstretching/utils/export.dart';
 
-
 class CustomTextField extends StatelessWidget {
   CustomTextField({
     super.key,
@@ -28,8 +27,8 @@ class CustomTextField extends StatelessWidget {
     this.focusNode,
     this.suffixIconOnTap,
     this.borderColor,
-    this.onFieldSubmitted, this.labelText,
-
+    this.onFieldSubmitted,
+    this.labelText,
   });
 
   final TextEditingController? textEditingController;
@@ -59,7 +58,6 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-
       maxLines: maxLines ?? 1,
       minLines: minLines ?? 1,
       validator: validator,
@@ -84,15 +82,20 @@ class CustomTextField extends StatelessWidget {
         counterText: '',
         suffixIconConstraints:
             const BoxConstraints(minHeight: 25, minWidth: 25),
+
         prefixIcon: prefixIcon == null
             ? null
-            : SvgPicture.asset(
-                prefixIcon ?? "",
-                 height: 20.h,
-                colorFilter: ColorFilter.mode(
-
-                    preIconColor ?? AppColors.greyScale1Color, BlendMode.srcIn),
-              ),
+            : IconButton(
+              onPressed: () {  },
+              icon: SvgPicture.asset(
+                  prefixIcon ?? "",
+                  height: 24.h,
+                  // width: 10.w,
+                  // fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                      preIconColor ?? AppColors.mainColor, BlendMode.srcIn),
+                ),
+            ),
         suffixIcon: suffixIcon == null
             ? null
             : ScaleButton(
@@ -100,10 +103,13 @@ class CustomTextField extends StatelessWidget {
                 child: SvgPicture.asset(
                   suffixIcon ?? "",
                   height: 20.h,
+                  width: 20.w,
+                  fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
-
-                    preIconColor ?? AppColors.greyScale1Color, BlendMode.srcIn),
-                )),
+                      preIconColor ?? AppColors.mainColor,
+                      BlendMode.srcIn),
+                ),
+              ),
         hintStyle: Theme.of(context)
             .textTheme
             .titleMedium
@@ -111,29 +117,6 @@ class CustomTextField extends StatelessWidget {
         hintText: hintText,
         filled: true,
         fillColor: fillColor ?? Colors.white,
-        border: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          borderSide: BorderSide(color: AppColors.greyScale3Color),
-        ),
-        enabledBorder: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          borderSide: BorderSide(color: AppColors.greyScale3Color),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-          borderSide: BorderSide(
-            color: borderColor ?? AppColors.mainColor,
-            width: 1.2,
-          ),
-        ),
-        focusedErrorBorder: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          borderSide: BorderSide(color: AppColors.red),
-        ),
-        disabledBorder: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          borderSide: BorderSide(color: AppColors.greyScale3Color),
-        ),
       ),
     );
   }
@@ -171,6 +154,7 @@ class CustomPrefixTextField extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final Color? fillColor;
   FormFieldValidator<String>? validator;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(

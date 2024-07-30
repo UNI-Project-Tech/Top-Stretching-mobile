@@ -17,8 +17,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_svg: ^2.0.10+1
   scale_button: ^2.1.2
-  country_state_city_picker: ^1.2.8
   flutter_screenutil: ^5.9.3
+  country_code_picker: ^3.0.0
 
 dev_dependencies:
   flutter_test:
