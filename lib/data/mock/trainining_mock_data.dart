@@ -47,6 +47,121 @@ final bodyMindItemList = [
   ),
 ];
 
+final trainingCategory = [
+  TrainingCategoryItemModel(
+    overview: TrainingCategoryOverview(
+      imageUrl: 'https://t4.ftcdn.net/jpg/04/36/81/43/360_F_436814322_pH4zCw93Crs5poH9dbJVzrUlG32G7v8n.jpg',
+      title: 'Split School',
+      description: 'A comprehensive program to help you achieve a front split.',
+      expects: [
+        'Improved flexibility',
+        'Stronger legs',
+        'Enhanced balance'
+      ],
+    ),
+    training: [
+      TrainingCategoryTraining(
+        title: 'Warm-up Routine',
+        description: 'A set of exercises to prepare your body for the splits.',
+        equipments: ['Mat'],
+        musclesInvolved: ['Hamstrings', 'Hip flexors'],
+        results: ['Increased blood flow', 'Reduced injury risk'],
+      ),
+      TrainingCategoryTraining(
+        title: 'Stretching Routine',
+        description: 'Targeted stretches to increase flexibility for the splits.',
+        equipments: ['Mat'],
+        musclesInvolved: ['Hamstrings', 'Hip flexors', 'Quadriceps'],
+        results: ['Increased flexibility', 'Enhanced muscle relaxation'],
+      ),
+    ],
+  ),
+  TrainingCategoryItemModel(
+    overview: TrainingCategoryOverview(
+      imageUrl: 'https://hopephysicaltherapy.com/wp-content/uploads/2021/12/7-Ways-Stretching-Can-Improve-Your-Health-and-Wellness.jpg',
+      title: 'Healthy Back',
+      description: 'Exercises designed to strengthen and stretch your back.',
+      expects: [
+        'Reduced back pain',
+        'Improved posture',
+        'Stronger core'
+      ],
+    ),
+    training: [
+      TrainingCategoryTraining(
+        title: 'Core Strengthening',
+        description: 'Exercises focused on building core strength.',
+        equipments: ['Mat', 'Resistance bands'],
+        musclesInvolved: ['Core', 'Lower back'],
+        results: ['Stronger core muscles', 'Better posture'],
+      ),
+      TrainingCategoryTraining(
+        title: 'Back Stretching',
+        description: 'Stretches to alleviate back pain and increase flexibility.',
+        equipments: ['Mat'],
+        musclesInvolved: ['Back', 'Shoulders'],
+        results: ['Reduced back pain', 'Enhanced flexibility'],
+      ),
+    ],
+  ),
+  TrainingCategoryItemModel(
+    overview: TrainingCategoryOverview(
+      imageUrl: 'https://www.athletico.com/wp-content/uploads/2014/08/how-to-safely-learn-splits-featured-new.jpg',
+      title: 'Stretching',
+      description: 'A set of exercises to enhance overall body flexibility.',
+      expects: [
+        'Full body flexibility',
+        'Increased range of motion',
+        'Reduced muscle tension'
+      ],
+    ),
+    training: [
+      TrainingCategoryTraining(
+        title: 'Full Body Stretch',
+        description: 'A comprehensive routine for stretching all major muscle groups.',
+        equipments: ['Mat'],
+        musclesInvolved: ['All major muscle groups'],
+        results: ['Enhanced flexibility', 'Reduced muscle tension'],
+      ),
+      TrainingCategoryTraining(
+        title: 'Post-Workout Stretch',
+        description: 'Stretching exercises to help with muscle recovery after workouts.',
+        equipments: ['Mat'],
+        musclesInvolved: ['All major muscle groups'],
+        results: ['Improved recovery', 'Reduced muscle soreness'],
+      ),
+    ],
+  ),
+];
+
+
+class TrainingCategoryItemModel{
+
+  final TrainingCategoryOverview overview;
+  final List<TrainingCategoryTraining> training;
+
+  TrainingCategoryItemModel({required this.overview, required this.training});
+}
+
+class TrainingCategoryOverview{
+  final String imageUrl;
+  final String title;
+  final String description;
+  final  List<String> expects;
+
+  TrainingCategoryOverview({required this.imageUrl, required this.title, required this.description, required this.expects});
+}
+
+class TrainingCategoryTraining{
+  final String title;
+  final String description;
+  final  List<String> equipments;
+  final  List<String> musclesInvolved;
+  final  List<String> results;
+
+  TrainingCategoryTraining({required this.title, required this.description, required this.equipments, required this.musclesInvolved, required this.results});
+}
+
 
 class TrainingItem {
   final String imageUrl;

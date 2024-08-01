@@ -1,3 +1,4 @@
+import 'package:topstretching/data/mock/trainining_mock_data.dart';
 import 'package:topstretching/screens/auth/forgot_password/new_password_screen.dart';
 import 'package:topstretching/screens/auth/forgot_password/send_code_screen.dart';
 import 'package:topstretching/screens/auth/login/login_screen.dart';
@@ -5,6 +6,7 @@ import 'package:topstretching/screens/auth/register/register_screen.dart';
 import 'package:topstretching/screens/auth/selected_auth_screen.dart';
 import 'package:topstretching/screens/on_board/on_boarding_screen.dart';
 import 'package:topstretching/screens/tabs/tab_box.dart';
+import 'package:topstretching/screens/tabs/training/training_categories/training_category_detail_screen.dart';
 import 'package:topstretching/utils/export.dart';
 
 class RouteNames {
@@ -17,6 +19,7 @@ class RouteNames {
   static const String newPassword = '/newPassword';
   static const String sendCode = '/sendCode';
   static const String tabs = '/tabs';
+  static const String trainingCategoryDetail = '/trainingCategoryDetail';
 
 }
 
@@ -37,6 +40,8 @@ class AppRoute {
         return _navigate(const NewPasswordScreen());
       case RouteNames.register:
         return _navigate(const RegisterScreen());
+        case RouteNames.trainingCategoryDetail:
+        return _navigate( TrainingCategoryDetail(model: settings.arguments as TrainingCategoryItemModel,));
 
         case RouteNames.tabs:
         return _navigate(const TabBoxScreen());

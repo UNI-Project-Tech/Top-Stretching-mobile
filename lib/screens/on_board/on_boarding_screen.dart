@@ -88,19 +88,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ),
             ),
             10.verticalSpace,
-            Padding(              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, RouteNames.login);
+                  Navigator.pushReplacementNamed(context, RouteNames.selectedAuth);
                 },
                 style: ElevatedButton.styleFrom(
-                  maximumSize:  Size(double.infinity, 50.h),
-                  minimumSize:  Size(double.infinity, 50.h),
-                  backgroundColor: (agreeToPrivacyPolicy && acceptTermsAndConditions)
-                      ? AppColors.pigmentGreen
-                      : AppColors.grey2,
+                  maximumSize: Size(double.infinity, 50.h),
+                  minimumSize: Size(double.infinity, 50.h),
+                  backgroundColor:
+                      (agreeToPrivacyPolicy && acceptTermsAndConditions)
+                          ? AppColors.pigmentGreen
+                          : AppColors.grey2,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24.r),
+                    borderRadius: BorderRadius.circular(24.r),
                   ),
                 ),
                 child: Text(

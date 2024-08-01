@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:topstretching/data/mock/trainining_mock_data.dart';
 import 'package:topstretching/screens/tabs/training/widgets/training_card.dart';
+import 'package:topstretching/screens/tabs/training/widgets/trainining_list_view.dart';
 import 'package:topstretching/utils/export.dart';
 
 class TrainingScreen extends StatelessWidget {
@@ -32,7 +33,8 @@ class TrainingScreen extends StatelessWidget {
             ),
             indicatorColor: AppColors.mainColor,
             dividerColor: AppColors.transparentColor,
-            tabs: [
+            tabs: const
+            [
               Tab(text: 'Stretching'),
               Tab(text: 'Functional'),
               Tab(text: 'Body Mind'),
@@ -41,9 +43,9 @@ class TrainingScreen extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            TrainingListView(items: stretchingItemList),
-            TrainingListView(items: functionalItemList),
-            TrainingListView(items: bodyMindItemList),
+            TrainingListView(items: stretchingItemList, onTap: (int i) {  },),
+            TrainingListView(items: functionalItemList, onTap: (int i) {  },),
+            TrainingListView(items: bodyMindItemList, onTap: (int index ) {  },),
           ],
         ),
       ),
@@ -51,25 +53,4 @@ class TrainingScreen extends StatelessWidget {
   }
 }
 
-class TrainingListView extends StatelessWidget {
-  final List<TrainingItem> items;
 
-  const TrainingListView({super.key, required this.items});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      padding: EdgeInsets.all(8.0),
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return TrainingCard(item: items[index]);
-      },
-    );
-  }
-}
-
-void main() {
-  runApp(MaterialApp(
-    home: TrainingScreen(),
-  ));
-}
