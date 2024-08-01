@@ -1,6 +1,4 @@
-import 'package:topstretching/common/constants/images.dart';
-import 'package:topstretching/common/widgets/custom_button.dart';
-import 'package:topstretching/common/widgets/text_field_widget.dart';
+
 import 'package:topstretching/utils/export.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -53,8 +51,6 @@ class LoginScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.pushNamedAndRemoveUntil(context, RouteNames.tabs, (n)=>false);
                     },
-
-
                     borderColor: AppColors.transparentColor,
                     radius: BorderRadius.circular(30.r),
 
@@ -81,3 +77,86 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
+
+/*
+import 'package:flutter/material.dart';
+import 'package:topstretching/utils/export.dart';
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          // Fon rasmi
+          Image.asset(
+            AppImages.loginBackg,
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          // Oq rangdagi qatlam
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.6,
+              decoration: BoxDecoration(
+                  // color: Colors.white,
+                  image: DecorationImage(
+                image: AssetImage("assets/images/login_backg.png"),
+                fit: BoxFit.cover,
+              )),
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: 'Enter your email',
+                        prefixIcon: Icon(Icons.person),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        hintText: 'Enter your password',
+                        prefixIcon: Icon(Icons.lock),
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'Forgot password',
+                        style: TextStyle(color: Colors.purple),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    ElevatedButton(
+                      child: Text('Log in'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.purple,
+                        minimumSize: Size(double.infinity, 50),
+                      ),
+                      onPressed: () {},
+                    ),
+                    SizedBox(height: 20),
+                    Text('Create a new account'),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+ */

@@ -60,8 +60,9 @@ class CustomButton extends StatelessWidget {
           decoration: BoxDecoration(
               gradient: gradient ?? AppColors.mainGradient,
               borderRadius: radius ?? BorderRadius.circular(10),
-              border: Border.all(color: borderColor ?? AppColors.greyScale3Color),
-              color:  bgColor ?? AppColors.mainColor ),
+              border:
+                  Border.all(color: borderColor ?? AppColors.greyScale3Color),
+              color: bgColor ?? AppColors.mainColor),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
@@ -84,6 +85,9 @@ class CustomButton extends StatelessWidget {
                                     iconC ?? textColor ?? AppColors.white,
                                     BlendMode.srcIn),
                               )
+                            : const SizedBox.shrink(),
+                        icon != null
+                            ? 10.horizontalSpace
                             : const SizedBox.shrink(),
                         Text(
                           text,

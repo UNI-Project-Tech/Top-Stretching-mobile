@@ -21,6 +21,7 @@ class TabBoxAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       bottom: bottom,
+      scrolledUnderElevation: 0,
       title: Text(
         title,
         style: AppTextStyle.gothamStdMedium.copyWith(fontSize: 18.sp),
