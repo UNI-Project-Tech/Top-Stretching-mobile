@@ -88,40 +88,43 @@ class CoursesScreen extends StatelessWidget {
             ),
           ),
           ListView.builder(
-              shrinkWrap: true,
-              itemCount: 3,
-              padding: const EdgeInsets.only(left: 15),
-              itemBuilder: (context, index) {
-                return Row(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10.r),
-                      child: Image.asset(
-                        'assets/images/course_preview.png',
-                        fit: BoxFit.cover,
-                        width: 216.h,
-                        height: 124.w,
-                      ),
+            shrinkWrap: true,
+            itemCount: 3,
+            padding: const EdgeInsets.only(left: 15),
+            itemBuilder: (context, index) {
+              return Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10.r),
+                    child: Image.asset(
+                      'assets/images/course_preview.png',
+                      fit: BoxFit.cover,
+                      width: 216.h,
+                      height: 124.w,
                     ),
-                    20.horizontalSpace,
-                    Column(
-                      children: [
-                        Text(
-                          "Fat burning and whole body pump",
-                          style: AppTextStyle.gothamStdSemiBold
-                              .copyWith(fontSize: 14.sp),
+                  ),
+                  20.horizontalSpace,
+                  Column(
+                    children: [
+                      Text(
+                        "Fat burning and whole body pump",
+                        style: AppTextStyle.gothamStdSemiBold
+                            .copyWith(fontSize: 14.sp),
+                      ),
+                      5.verticalSpace,
+                      Text(
+                        "With Sasha",
+                        style: AppTextStyle.gothamStdSemiBold.copyWith(
+                          fontSize: 14.sp,
+                          color: const Color(0xff878787),
                         ),
-                        5.verticalSpace,
-                        Text(
-                          "With Sasha",
-                          style: AppTextStyle.gothamStdSemiBold
-                              .copyWith(fontSize: 14.sp,color: Color(0xff878787)),
-                        ),
-                      ],
-                    )
-                  ],
-                );
-              })
+                      ),
+                    ],
+                  )
+                ],
+              );
+            },
+          ),
         ],
       ),
     );
