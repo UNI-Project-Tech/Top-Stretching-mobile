@@ -16,7 +16,7 @@ class TabBoxScreen extends StatefulWidget {
 class _TabBoxScreenState extends State<TabBoxScreen> {
   final List<Widget> _screens = [
     const HomeScreen(),
-    const TrainingScreen(),
+     TrainingScreen(),
     const CoursesScreen(),
     const ExploreScreen(),
     const NutritionScreen(),

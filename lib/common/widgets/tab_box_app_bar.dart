@@ -3,15 +3,15 @@ import 'package:topstretching/utils/export.dart';
 
 class TabBoxAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-
+  final PreferredSizeWidget? bottom;
 
   final List<Widget> actions;
 
-  TabBoxAppBar({super.key,
+  TabBoxAppBar({
+    super.key,
     required this.title,
-
-
     this.actions = const [],
+    this.bottom,
   });
 
   @override
@@ -20,14 +20,14 @@ class TabBoxAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-
-      title: Text(title,style: AppTextStyle.gothamStdMedium.copyWith(fontSize: 18.sp),),
-
+      bottom: bottom,
+      title: Text(
+        title,
+        style: AppTextStyle.gothamStdMedium.copyWith(fontSize: 18.sp),
+      ),
       actions: actions,
       elevation: 4.0,
-
       centerTitle: true,
     );
   }
 }
-
