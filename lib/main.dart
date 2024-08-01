@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 915),
       builder: (context,child){
         ScreenUtil.init(context);
-        return MaterialApp(
+        return const MaterialApp(
           title: 'Top Stretching',
           onGenerateRoute: AppRoute.onGenerate,
           initialRoute: RouteNames.splash,
